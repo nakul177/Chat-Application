@@ -6,19 +6,188 @@
 :root {
     --color-background: #ffffff;
     --color-text: #111827;
-    --color-primary: #4f46e5;
+    --color-inverse-text:#f3f4f6;
+    --color-primary: #554bf5;
+    --color-primary-hover: #4538d1;
     --color-secondary: #fbbf24;
+    --color-secondary-hover: #e3a008;
+    --color-inverse: #1f2937;
+    --color-border: #d1d5db;
+    --color-error: #dc2626;
+    --color-error-hover: #b91c1c;
+    --color-warning: #f59e0b;
+    --color-warning-hover: #d97706;
+    --color-text-hover: #ffffff;  /* Text changes to white on hover */
+    --color-link: #1e40af;             /* Blue link for light mode */
+    --color-link-hover: #1d4ed8;
+    --color-link-inverse: #ffffff;
 }
 
-/* Dark theme */
+/* Dark Theme */
 html.dark {
     --color-background: #1f2937;
     --color-text: #f3f4f6;
+    --color-inverse-text:#111827;
     --color-primary: #818cf8;
+    --color-primary-hover: #6366f1;
     --color-secondary: #facc15;
+    --color-secondary-hover: #eab308;
+    --color-inverse: #ffffff;
+    --color-border: #4b5563;
+    --color-error: #f87171;
+    --color-error-hover: #ef4444;
+    --color-warning: #fbbf24;
+    --color-warning-hover: #f59e0b;
+    --color-text-hover: #000000;  /* Dark mode hover – text turns black */
+    --color-link: #111827;             /* Dark link in dark mode */
+    --color-link-hover: #374151;
+    --color-link-inverse: #1e40af;
 }
+
 
 body {
     background-color: var(--color-background);
     color: var(--color-text);
+}
+
+/* Base Button Style (Adapt to Theme) */
+/* Base Button */
+/* Base Button */
+.btn {
+    @apply inline-flex items-center justify-center rounded-btn font-medium transition-all ;
+    padding: 6px 12px;  /* Adjust padding as needed */
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* Hover State for Primary Button */
+.btn:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    color: var(--color-text-hover);
+}
+
+/* Inverse Button */
+.btn-inverse {
+    background-color: #4538D1FF;
+    /*border-color: var(--color-inverse-text);*/
+    color:white;
+}
+
+.btn-inverse:hover {
+    background-color: #6366F1FF;
+    color: var(--color-text);
+}
+
+/* Error Inverse Button */
+.btn-error-inverse {
+    background-color: var(--color-inverse);
+    border-color: var(--color-error);
+    color: var(--color-error);
+}
+.btn-error-inverse:hover {
+    background-color: var(--color-error);
+    border-color: var(--color-error-hover);
+    color: var(--color-inverse);
+}
+
+/* Warning Inverse Button */
+.btn-warning-inverse {
+    background-color: var(--color-inverse);
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+}
+.btn-warning-inverse:hover {
+    background-color: var(--color-warning);
+    border-color: var(--color-warning-hover);
+    color: var(--color-inverse);
+}
+
+/* Disabled Button */
+.btn-disabled {
+    background-color: var(--color-border);
+    color: var(--color-text);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Disabled Button (No Hover) */
+.btn-disabled {
+    background-color: var(--color-border);
+    color: var(--color-text);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+a.inverse-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-link-inverse);
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+html.dark a.inverse-link::before {
+    background-color: #1e40af;  /* Light link background in dark mode */
+}
+
+/* Base Button Style (Adapt to Theme) */
+/*.btn {*/
+/*    @apply inline-flex items-center justify-center rounded-lg font-medium transition-all border-btn;*/
+/*    @apply p-btn-md;  !* Use p-btn-md from Tailwind config *!*/
+/*    color: var(--color-text);*/
+/*    background-color: var(--color-primary);*/
+/*    border-color: var(--color-primary);*/
+/*}*/
+
+
+/*.btn:hover {*/
+/*    background-color: var(--color-secondary);*/
+/*    border-color: var(--color-secondary);*/
+/*}*/
+
+
+/*!* Error Button *!*/
+/*.btn-error {*/
+/*    background-color: var(--color-error);*/
+/*    border-color: var(--color-error);*/
+/*}*/
+
+/*.btn-error:hover {*/
+/*    opacity: 0.9;*/
+/*}*/
+
+/*!* Warning Button *!*/
+/*.btn-warning {*/
+/*    background-color: var(--color-warning);*/
+/*    border-color: var(--color-warning);*/
+/*}*/
+
+/*.btn-warning:hover {*/
+/*    opacity: 0.9;*/
+/*}*/
+
+/*!* Disabled State *!*/
+/*.btn-disabled {*/
+/*    background-color: var(--color-border);*/
+/*    color: var(--color-text);*/
+/*    cursor: not-allowed;*/
+/*    opacity: 0.6;*/
+/*}*/
+
+/* Focus and Active States */
+.btn:focus {
+    @apply ring-2 ring-primary ring-opacity-50;
+}
+
+
+.btn-gradient {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
