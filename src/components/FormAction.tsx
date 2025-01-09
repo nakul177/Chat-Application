@@ -1,5 +1,5 @@
 interface FormActionProps {
-    handleSubmit:any;
+    handleSubmit: any;
     type?: 'Button' | 'Other';
     action?: 'submit' | 'button';
     text: string;
@@ -7,20 +7,19 @@ interface FormActionProps {
 
 export default function FormAction({
                                        handleSubmit,
-                                       type='Button',
-                                       action='submit',
+                                       type = 'Button',
+                                       action = 'submit',
                                        text
-                                   } : FormActionProps){
-    return(
+                                   }: FormActionProps) {
+    return (
         <>
             {
-                type==='Button' ?
+                type === 'Button' ?
                     <button
                         type={action}
                         className="btn btn-inverse w-full"
                         onSubmit={handleSubmit}
                     >
-
                         {text}
                     </button>
                     :

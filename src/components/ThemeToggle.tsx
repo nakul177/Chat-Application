@@ -8,7 +8,7 @@ const ThemeToggle = () => {
         <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
-            className="p-2 absolute top-0 rounded-full bg-primary text-background"
+            className="p-2 absolute top-2 right-2 rounded-full bg-primary text-background"
         >
             {theme === 'light' ? (
                 <Sun  className="w-6 h-6" />

@@ -1,4 +1,4 @@
-const fixedInputClass="rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm"
+
 interface FormInputProps {
     handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     value: string;
@@ -26,7 +26,7 @@ export default function Input({
                               } : FormInputProps){
     return(
         <div className="my-5">
-            <label htmlFor={labelFor} className="sr-only">
+            <label className="block text-text mb-1" htmlFor={labelFor}>
                 {labelText}
             </label>
             <input
@@ -36,7 +36,7 @@ export default function Input({
                 name={name}
                 type={type}
                 required={isRequired}
-                className={fixedInputClass+customClass}
+                className={'input-custom'+ " " + customClass }
                 placeholder={placeholder}
             />
         </div>

@@ -2,6 +2,7 @@ import {Navigate, useRoutes} from "react-router-dom";
 import {lazy, Suspense} from "react";
 import LoadingScreen from "../components/Loading.tsx";
 import AuthLayout from "../layout/auth";
+import {AUTHROUTES} from "./routes.ts";
 
 
 const Loadable = (Component: any) => (props: any) => {
@@ -21,15 +22,18 @@ const Routes = () => {
                 {
                     path: "login",
                     element: <LoginPage/>
-                },{
-                path:"signup",
-                element : <SignUpPage/>
+                }, {
+                    path: "signup",
+                    element: <SignUpPage/>
+                }, {
+                    path: "forgot-password",
+                    element: <ForgotPage/>
                 }
             ]
         },
         {
             path: "/",
-            element: <Navigate to="/auth/login" replace/>,  // Redirect root to /auth/login
+            element: <Navigate to={AUTHROUTES.LOGIN} replace/>,  // Redirect root to /auth/login
         },
     ]);
 }
@@ -37,4 +41,5 @@ const Routes = () => {
 
 const LoginPage = Loadable(lazy(() => import("../pages/login.tsx")));
 const SignUpPage = Loadable(lazy(() => import("../pages/signup.tsx")));
+const ForgotPage = Loadable(lazy(() => import("../pages/forgot.tsx")))
 export default Routes;

@@ -8,26 +8,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'var(--color-background)',
-        'bg-Inverse': 'var(--color-inverse)',
-        textColor: 'var(--color-text)',
-        primary: 'var(--color-primary)',
-        primaryHover: 'var(--color-primary-hover)',
-        secondary: 'var(--color-secondary)',
+        // Backgrounds
+        background: 'var(--color-background)', // Neutral light
+        surface: 'var(--color-surface)',
+        'surface-inverse': 'var(--color-inverse-surface)',
+        text: 'var(--color-text)',             // Primary text
+        'text-inverse': 'var(--color-inverse-text)', // High-contrast inverse text
+        placeholder: 'var(--color-placeholder)', // Placeholder text
+
+        // Primary Buttons and Links
+        primary: 'var(--color-primary)',       // Primary button/link
+        primaryHover: 'var(--color-primary-hover)', // Accessible hover color
+        link: 'var(--color-link)',             // Accessible links
+        linkHover: 'var(--color-link-hover)',  // Link hover
+
+        // Secondary
+        secondary: 'var(--color-secondary)',   // Accent secondary
         secondaryHover: 'var(--color-secondary-hover)',
+
+        // Borders and States
         border: 'var(--color-border)',
-        error: 'var(--color-error)',
-        errorHover: 'var(--color-error-hover)',
-        warning: 'var(--color-warning)',
+        error: 'var(--color-error)',           // Errors
+        errorHover: 'var(--color-error-hover)',// Error hover
+        warning: 'var(--color-warning)',       // Warnings
         warningHover: 'var(--color-warning-hover)',
-        textHover: 'var(--color-text-hover)',
-        'text-inverse': 'var(--color-inverse-text)',
-        link: 'var(--color-link)',
-        linkHover: 'var(--color-link-hover)',
-        linkInverse: 'var(--color-link-inverse)',
+
+        // Interactive States
+        'border-focus': 'var(--color-border-focus)', // Input focus state
+        'text-hover': 'var(--color-text-hover)',     // Text on hover
       },
       borderRadius: {
-        'btn': '12px',
+        btn: '12px', // Buttons
       },
       padding: {
         'btn-sm': '0.5rem 1rem',
@@ -40,5 +51,4 @@ export default {
     },
   },
   plugins: [],
-}
-
+};

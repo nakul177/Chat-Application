@@ -3,122 +3,219 @@
 @tailwind utilities;
 
 /* Default theme (Light mode) */
+/*:root {*/
+/*    --color-background: #ffffff;*/
+/*    --color-text: #111827;*/
+/*    --color-inverse-text:#f3f4f6;*/
+/*    --color-primary: #554bf5;*/
+/*    --color-primary-hover: #4538d1;*/
+/*    --color-secondary: #fbbf24;*/
+/*    --color-secondary-hover: #e3a008;*/
+/*    --color-inverse: #1f2937;*/
+/*    --color-border: #d1d5db;*/
+/*    --color-error: #dc2626;*/
+/*    --color-error-hover: #b91c1c;*/
+/*    --color-warning: #f59e0b;*/
+/*    --color-warning-hover: #d97706;*/
+/*    --color-text-hover: #ffffff;  !* Text changes to white on hover *!*/
+/*    --color-link: #1e40af;             !* Blue link for light mode *!*/
+/*    --color-link-hover: #1d4ed8;*/
+/*    --color-link-inverse: #ffffff;*/
+/*}*/
+
+/*!* Dark Theme *!*/
+/*html.dark {*/
+/*    --color-background: #1f2937;*/
+/*    --color-text: #f3f4f6;*/
+/*    --color-inverse-text:#111827;*/
+/*    --color-primary: #818cf8;*/
+/*    --color-primary-hover: #6366f1;*/
+/*    --color-secondary: #facc15;*/
+/*    --color-secondary-hover: #eab308;*/
+/*    --color-inverse: #ffffff;*/
+/*    --color-border: #4b5563;*/
+/*    --color-error: #f87171;*/
+/*    --color-error-hover: #ef4444;*/
+/*    --color-warning: #fbbf24;*/
+/*    --color-warning-hover: #f59e0b;*/
+/*    --color-text-hover: #000000;  !* Dark mode hover – text turns black *!*/
+/*    --color-link: #554bf5;             !* Blue link for light mode *!*/
+/*    --color-link-hover: #1d4ed8;*/
+/*    --color-link-inverse: #1e40af;*/
+/*}*/
+
+@layer utilities {
+    .text-text {
+        color: var(--color-text);
+    }
+    .text-inverse-text {
+        color: var(--color-inverse-text);
+    }
+    .bg-background {
+        background-color: var(--color-background);
+    }
+    .bg-surface {
+        background-color: var(--color-surface);
+    }
+    .border-border {
+        border-color: var(--color-border);
+    }
+    .border-border-focus {
+        border-color: var(--color-border-focus);
+    }
+    .text-placeholder {
+        color: var(--color-placeholder);
+    }
+}
+
 :root {
-    --color-background: #ffffff;
-    --color-text: #111827;
-    --color-inverse-text:#f3f4f6;
-    --color-primary: #554bf5;
-    --color-primary-hover: #4538d1;
-    --color-secondary: #fbbf24;
-    --color-secondary-hover: #e3a008;
-    --color-inverse: #1f2937;
-    --color-border: #d1d5db;
-    --color-error: #dc2626;
+    /* Backgrounds */
+    --color-background: #f9fafb;       /* Light neutral background */
+    --color-surface: #ffffff;          /* Surface (e.g., cards, modals) */
+    --color-inverse-surface: #1f2937; /* Inverse surface for dark text */
+
+    /* Text */
+    --color-text: #111827;             /* Dark text */
+    --color-inverse-text: #f9fafb;     /* Light text on dark */
+    --color-placeholder: #9ca3af;      /* Placeholder text */
+
+    /* Primary */
+    --color-primary: #4f46e5;          /* Indigo primary */
+    --color-primary-hover: #4338ca;    /* Darker hover state */
+
+    /* Secondary */
+    --color-secondary: #f59e0b;        /* Amber secondary */
+    --color-secondary-hover: #d97706; /* Darker amber hover */
+
+    /* Borders and Inputs */
+    --color-border: #e5e7eb;           /* Light borders */
+    --color-border-focus: #3b82f6;     /* Focused input border */
+
+    /* Errors */
+    --color-error: #dc2626;            /* Error red */
     --color-error-hover: #b91c1c;
-    --color-warning: #f59e0b;
+
+    /* Warnings */
+    --color-warning: #f59e0b;          /* Warning amber */
     --color-warning-hover: #d97706;
-    --color-text-hover: #ffffff;  /* Text changes to white on hover */
-    --color-link: #1e40af;             /* Blue link for light mode */
-    --color-link-hover: #1d4ed8;
-    --color-link-inverse: #ffffff;
+
+    /* Links */
+    --color-link: #2563eb;             /* Blue link for light mode */
+    --color-link-hover: #1e40af;
+    --color-link-inverse: #ffffff;     /* Inverse link for dark mode */
 }
 
 /* Dark Theme */
 html.dark {
-    --color-background: #1f2937;
-    --color-text: #f3f4f6;
-    --color-inverse-text:#111827;
-    --color-primary: #818cf8;
+    /* Backgrounds */
+    --color-background: #1f2937;       /* Dark neutral background */
+    --color-surface: #111827;          /* Dark surface */
+    --color-inverse-surface: #f9fafb; /* Light inverse surface */
+
+    /* Text */
+    --color-text: #f9fafb;             /* Light text */
+    --color-inverse-text: #111827;     /* Dark text on light */
+    --color-placeholder: #6b7280;      /* Muted placeholder text */
+
+    /* Primary */
+    --color-primary: #818cf8;          /* Light indigo */
     --color-primary-hover: #6366f1;
-    --color-secondary: #facc15;
+
+    /* Secondary */
+    --color-secondary: #facc15;        /* Light amber */
     --color-secondary-hover: #eab308;
-    --color-inverse: #ffffff;
-    --color-border: #4b5563;
+
+    /* Borders and Inputs */
+    --color-border: #374151;           /* Dark borders */
+    --color-border-focus: #818cf8;     /* Focused input border */
+
+    /* Errors */
     --color-error: #f87171;
     --color-error-hover: #ef4444;
+
+    /* Warnings */
     --color-warning: #fbbf24;
     --color-warning-hover: #f59e0b;
-    --color-text-hover: #000000;  /* Dark mode hover – text turns black */
-    --color-link: #111827;             /* Dark link in dark mode */
-    --color-link-hover: #374151;
-    --color-link-inverse: #1e40af;
+
+    /* Links */
+    --color-link: #a5b4fc;             /* Indigo link for dark mode */
+    --color-link-hover: #818cf8;
+    --color-link-inverse: #2563eb;
 }
 
-
+/* Global Styles */
 body {
     background-color: var(--color-background);
     color: var(--color-text);
 }
 
-/* Base Button Style (Adapt to Theme) */
-/* Base Button */
 /* Base Button */
 .btn {
-    @apply inline-flex items-center justify-center rounded-btn font-medium transition-all ;
+    @apply inline-flex items-center justify-center rounded-btn font-medium transition-all;
     padding: 6px 12px;  /* Adjust padding as needed */
     color: var(--color-text);
     background-color: var(--color-primary);
-    border-color: var(--color-primary);
+    /*border: 2px solid var(--color-primary);*/
 }
 
 /* Hover State for Primary Button */
 .btn:hover {
     background-color: var(--color-primary-hover);
     border-color: var(--color-primary-hover);
-    color: var(--color-text-hover);
+    color: var(--color-text);
 }
 
 /* Inverse Button */
 .btn-inverse {
-    background-color: #4538D1FF;
-    /*border-color: var(--color-inverse-text);*/
-    color:white;
+    background-color: var(--color-inverse-surface);
+    color: var(--color-inverse-text);
+    /*border: 2px solid var(--color-inverse-text);*/
 }
 
 .btn-inverse:hover {
-    background-color: #6366F1FF;
+    background-color: var(--color-primary-hover);
     color: var(--color-text);
 }
 
 /* Error Inverse Button */
 .btn-error-inverse {
-    background-color: var(--color-inverse);
+    background-color: var(--color-inverse-surface);
     border-color: var(--color-error);
     color: var(--color-error);
 }
+
 .btn-error-inverse:hover {
     background-color: var(--color-error);
     border-color: var(--color-error-hover);
-    color: var(--color-inverse);
+    color: var(--color-inverse-surface);
 }
 
 /* Warning Inverse Button */
 .btn-warning-inverse {
-    background-color: var(--color-inverse);
+    background-color: var(--color-inverse-surface);
     border-color: var(--color-warning);
     color: var(--color-warning);
 }
+
 .btn-warning-inverse:hover {
     background-color: var(--color-warning);
     border-color: var(--color-warning-hover);
-    color: var(--color-inverse);
+    color: var(--color-inverse-surface);
 }
 
 /* Disabled Button */
 .btn-disabled {
     background-color: var(--color-border);
-    color: var(--color-text);
+    color: var(--color-placeholder);
     cursor: not-allowed;
     opacity: 0.6;
 }
 
-
-/* Disabled Button (No Hover) */
-.btn-disabled {
-    background-color: var(--color-border);
-    color: var(--color-text);
-    cursor: not-allowed;
-    opacity: 0.6;
+/* Links */
+a.inverse-link {
+    position: relative;
+    color: var(--color-link-inverse);
+    text-decoration: none;
 }
 
 a.inverse-link::before {
@@ -133,6 +230,45 @@ a.inverse-link::before {
 html.dark a.inverse-link::before {
     background-color: #1e40af;  /* Light link background in dark mode */
 }
+
+/* Base Input */
+.input-custom {
+    @apply block w-full px-4 py-2 rounded-lg text-text bg-surface border border-border focus:outline-none;
+    transition: all 0.3s ease;
+}
+
+/* Focus State */
+.input-custom:focus {
+    border-color: var(--color-border-focus);
+    box-shadow: 0 0 0 2px var(--color-border-focus);
+}
+
+/* Placeholder */
+.input-custom::placeholder {
+    color: var(--color-placeholder);
+}
+
+/* Error Input */
+.input-error {
+    border-color: var(--color-error);
+    background-color: rgba(220, 38, 38, 0.1); /* Light red tint for errors */
+}
+
+.input-error:focus {
+    border-color: var(--color-error-hover);
+    box-shadow: 0 0 0 2px var(--color-error-hover);
+}
+
+/* Disabled Input */
+.input-disabled {
+    background-color: var(--color-border);
+    color: var(--color-placeholder);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+
 
 /* Base Button Style (Adapt to Theme) */
 /*.btn {*/
