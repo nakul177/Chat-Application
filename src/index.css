@@ -153,28 +153,27 @@ body {
 .btn {
     @apply inline-flex items-center justify-center rounded-btn font-medium transition-all;
     padding: 6px 12px;  /* Adjust padding as needed */
-    color: var(--color-text);
+    color: var(--color-primary);
     background-color: var(--color-primary);
     /*border: 2px solid var(--color-primary);*/
 }
 
 /* Hover State for Primary Button */
 .btn:hover {
-    background-color: var(--color-primary-hover);
-    border-color: var(--color-primary-hover);
+    background-color: var( --color-primary-hover);
+    /* border-color: var(--color-primary-hover); */
     color: var(--color-text);
 }
 
 /* Inverse Button */
 .btn-inverse {
-    background-color: var(--color-inverse-surface);
-    color: var(--color-inverse-text);
-    /*border: 2px solid var(--color-inverse-text);*/
+    background-color: var(--color-primary);
+    color: white;
 }
 
 .btn-inverse:hover {
     background-color: var(--color-primary-hover);
-    color: var(--color-text);
+    color: white;
 }
 
 /* Error Inverse Button */

@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import { signupFields } from "../constants/formFields.ts"
 import FormAction from "./FormAction";
 import Input from "./Input";
+import { resetPasswordFields } from '../constants/formFields';
 
-const fields:any =signupFields;
+const fields:any = resetPasswordFields;
 let fieldsState :any={};
 
 fields.forEach((field:any) => fieldsState[field.id]='');
 
-export default function Signup(){
-    const [signupState,setSignupState]=useState(fieldsState);
+export default function ResetPassword(){
+    const [resetPasswordState,setResetPasswordState]=useState(fieldsState);
 
-    const handleChange=(e:any)=>setSignupState({...signupState,[e.target.id]:e.target.value});
+    const handleChange=(e:any)=>setResetPasswordState({...resetPasswordState,[e.target.id]:e.target.value});
 
     const handleSubmit=(e:any)=>{
         e.preventDefault();
@@ -31,7 +31,7 @@ export default function Signup(){
                         <Input
                             key={field.id}
                             handleChange={handleChange}
-                            value={signupState[field.id]}
+                            value={resetPasswordState[field.id]}
                             labelText={field.labelText}
                             labelFor={field.labelFor}
                             id={field.id}
@@ -43,7 +43,7 @@ export default function Signup(){
 
                     )
                 }
-                <FormAction handleSubmit={handleSubmit} text="Signup" />
+                <FormAction handleSubmit={handleSubmit} text="Set a new Password" />
             </div>
         </form>
     )

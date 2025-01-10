@@ -1,3 +1,6 @@
+//OTP Length
+const otpLength:number = 4;
+
 const loginFields =[
     {
         labelText:"Email address",
@@ -77,4 +80,27 @@ const forgotPasswordFields=[
     }
 ]
 
-export {loginFields,signupFields,forgotPasswordFields}
+const resetPasswordFields = [
+    {
+        labelText:"Password",
+        labelFor:"password",
+        id:"password",
+        name:"password",
+        type:"password",
+        autoComplete:"current-password",
+        isRequired:true,
+        placeholder:"Password"
+    },
+    {
+        labelText:"Confirm Password",
+        labelFor:"confirm-password",
+        id:"confirm-password",
+        name:"confirm-password",
+        type:"password",
+        autoComplete:"confirm-password",
+        isRequired:true,
+        placeholder:"Confirm Password"
+    }
+]
+
+export {loginFields,signupFields,forgotPasswordFields,resetPasswordFields,otpLength}

@@ -6,7 +6,7 @@ const ForgotPage = () => {
         <>
             <Header
                 heading="Forget Password"
-                paragraph="Enter your email account to reset password"
+                paragraph="Don't worry! It happens. Please enter the address associated with account."
             />
             <Forgot/>
         </>
