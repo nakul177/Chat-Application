@@ -151,10 +151,11 @@ body {
 
 /* Base Button */
 .btn {
-    @apply inline-flex items-center justify-center rounded-btn font-medium transition-all;
+    @apply inline-flex items-center justify-center font-medium transition-all;
     padding: 6px 12px;  /* Adjust padding as needed */
     color: var(--color-primary);
     background-color: var(--color-primary);
+    border-radius: 8px;
     /*border: 2px solid var(--color-primary);*/
 }
 

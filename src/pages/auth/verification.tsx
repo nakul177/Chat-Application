@@ -1,5 +1,5 @@
-import Header from "../components/Header"
-import Verification from "../components/Verification"
+import Header from "../../components/Header"
+import Verification from "../../components/Verification"
 
 const VerificationPage = () => {
     return (

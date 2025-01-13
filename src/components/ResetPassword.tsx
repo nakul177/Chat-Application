@@ -15,11 +15,12 @@ export default function ResetPassword(){
 
     const handleSubmit=(e:any)=>{
         e.preventDefault();
-        createAccount()
+      
+        resetPassword();
     }
 
     //handle Signup API Integration here
-    const createAccount=()=>{
+    const resetPassword=()=>{
 
     }
 

@@ -1,6 +1,6 @@
-import Header from "../components/Header.tsx";
-import Login from "../components/Login.tsx";
-import {AUTHROUTES} from "../routes/routes.ts";
+import Header from "../../components/Header.tsx";
+import Login from "../../components/Login.tsx";
+import {AUTHROUTES} from "../../routes/routes.ts";
 
 const LoginPage = () =>{
     return (

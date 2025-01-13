@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+const { nextui } = require("@nextui-org/react");
 export default {
   darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+      "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -48,7 +50,22 @@ export default {
       transitionProperty: {
         'color-bg': 'color, background-color, border-color',
       },
+      fontSize: {
+        'sub-title-size': ['1rem', {
+          lineHeight: '2rem',
+          letterSpacing: '-0.01em',
+          fontWeight: '400',
+        }],
+        'title-size': ['1.3rem', {
+          lineHeight: '2.25rem',
+          letterSpacing: '-0.02em',
+          fontWeight: '500',
+        }],
+      },
+      spacing: {
+        'sideBarWidth': '4rem',
+      },
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 };

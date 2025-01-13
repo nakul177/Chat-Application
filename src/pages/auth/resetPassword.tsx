@@ -1,6 +1,5 @@
-import Header from "../components/Header"
-import ResetPassword from "../components/ResetPassword";
-
+import Header from "../../components/Header";
+import ResetPassword from "../../components/ResetPassword";
 
 const ResetPasswordPage = () => {
     return (

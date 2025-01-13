@@ -1,10 +1,8 @@
 import {Outlet} from "react-router-dom";
-import ThemeToggle from "../../components/ThemeToggle.tsx";
 
 const AuthLayout = () => {
     return (
         <>
-        <ThemeToggle/>
         <div className="flex items-center justify-center min-h-screen bg-background">
             <div className="flex bg-surface rounded-xl overflow-hidden shadow-2xl max-w-4xl w-full md:h-fit h-screen items-center">
                 {/*left section */}

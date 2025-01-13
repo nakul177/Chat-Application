@@ -1,5 +1,5 @@
-import Header from "../components/Header.tsx";
-import Forgot from "../components/Forgot.tsx";
+import Header from "../../components/Header.tsx";
+import Forgot from "../../components/Forgot.tsx";
 
 const ForgotPage = () => {
     return (

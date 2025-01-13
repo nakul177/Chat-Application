@@ -16,7 +16,7 @@ export default function Header({
                                } :header){
     return(
         <div className="mb-10">
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-text">
+            <h2 className="mt-6 text-center text-2xl font-medium text-text">
                 {heading}
             </h2>
             <p className="mt-2 text-text text-center text-sm text-text mt-5">

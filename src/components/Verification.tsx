@@ -9,7 +9,7 @@ export default function Verification() {
         console.log("otp", otp)
     }
     const handleSubmit = (e:any) =>{
-        e.preventDefault();
+         e.preventDefault();
         navigate(AUTHROUTES.RESETPASSWORD)
     }
 

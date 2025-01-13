@@ -2,8 +2,7 @@ import { Navigate, useRoutes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import LoadingScreen from "../components/Loading.tsx";
 import AuthLayout from "../layout/auth";
-import { AUTHROUTES } from "./routes.ts";
-
+import Main from "../layout/main/index.tsx";
 
 const Loadable = (Component: any) => (props: any) => {
     return (
@@ -30,25 +29,36 @@ const Routes = () => {
                     element: <ForgotPage />
                 },
                 {
-                    path:"verify",
-                    element:<Verification/>
-                },{
-                    path:"reset-password",
-                    element:<ResetPassword/>
+                    path: "verify",
+                    element: <Verification />
+                }, {
+                    path: "reset-password",
+                    element: <ResetPassword />
                 }
             ]
         },
-        {
+         {
             path: "/",
-            element: <Navigate to={AUTHROUTES.LOGIN} replace />,  // Redirect root to /auth/login
+            element: <Main />,
+            children: [
+                { element: <Navigate to={"/app"} replace />, index: true },
+                { path: "app", element: <GeneralApp /> },
+            ]
         },
     ]);
 }
 
+// auth pages lazy 
+const LoginPage = Loadable(lazy(() => import("../pages/auth/login.tsx")));
+const SignUpPage = Loadable(lazy(() => import("../pages/auth/signup.tsx")));
+const ForgotPage = Loadable(lazy(() => import("../pages/auth/forgot.tsx")))
+const Verification = Loadable(lazy(() => import("../pages/auth/verification.tsx")))
+const ResetPassword = Loadable(lazy(() => import("../pages/auth/resetPassword.tsx")))
 
-const LoginPage = Loadable(lazy(() => import("../pages/login.tsx")));
-const SignUpPage = Loadable(lazy(() => import("../pages/signup.tsx")));
-const ForgotPage = Loadable(lazy(() => import("../pages/forgot.tsx")))
-const Verification = Loadable(lazy(() => import("../pages/verification.tsx")))
-const ResetPassword = Loadable(lazy(() => import("../pages/resetPassword.tsx")))
+
+//App pages lazy 
+
+const GeneralApp = Loadable(lazy(() => import("../pages/main/GeneralApp.tsx")))
+
+
 export default Routes;
