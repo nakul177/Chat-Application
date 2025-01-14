@@ -5,14 +5,15 @@ import NavBar from "./NavBar";
 const Main = () => {
     return (
         <>
-          
+           <NavBar />
             <div className="flex col bg-background ">
-                <div className="flex-none">
+                <div className="flex-none ">
                     <SideBar />
                 </div>
                 <div className="flex-1">
-                <NavBar />
-                    <Outlet />
+            
+                        <Outlet />
+                    
                 </div>
             </div>
         </>

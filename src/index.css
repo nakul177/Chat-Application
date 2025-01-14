@@ -70,8 +70,10 @@
 
 :root {
     /* Backgrounds */
-    --color-background: #f9fafb;       /* Light neutral background */
-    --color-surface: #ffffff;          /* Surface (e.g., cards, modals) */
+    /* --color-background: #f9fafb;      
+    --color-surface: #ffffff;        */
+    --color-background: #FFFFFF;      
+    --color-surface: #F0F2F5;  
     --color-inverse-surface: #1f2937; /* Inverse surface for dark text */
 
     /* Text */
@@ -108,8 +110,12 @@
 /* Dark Theme */
 html.dark {
     /* Backgrounds */
-    --color-background: #1f2937;       /* Dark neutral background */
-    --color-surface: #111827;          /* Dark surface */
+    
+     /* --color-background: #1f2937;       
+    --color-surface: #111827; */
+    
+    --color-background: #111B21;      
+    --color-surface: #222E35;             
     --color-inverse-surface: #f9fafb; /* Light inverse surface */
 
     /* Text */
@@ -327,3 +333,6 @@ html.dark a.inverse-link::before {
 .btn:active {
     transform: scale(0.95);
 }
+
+
+

@@ -1,6 +1,8 @@
+import { NAVBARHEIGHT } from "../../config"
+
 const GeneralApp = () =>{
     return (
-    <h1>App</h1>
+          <div style={{height:`calc(100vh - ${NAVBARHEIGHT})`}} className="rounded-tl-lg"></div>
     )
 }
 
