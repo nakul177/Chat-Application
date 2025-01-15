@@ -63,7 +63,7 @@ export default {
         }],
       },
       spacing: {
-        'sideBarWidth': '45px',
+        'sideBarWidth': '50px',
       },
     },
   },
